@@ -105,7 +105,8 @@ source ~/.bashrc
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
-If `/usr/local/bin` is also missing (or only this missing), then (also) run this: 
+If `/usr/local/bin` is also missing (or only this missing), then (also) run:
+
 **Bash:**
 ```sh
 echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bashrc
