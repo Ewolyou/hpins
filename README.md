@@ -116,3 +116,8 @@ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 Once it's installed successfully, you can just type `hpins` and it should work, after that, the program should help you on using it correctly.
+
+---
+
+## Changelog
+[Changelog](CHANGELOG.md)
