@@ -70,8 +70,9 @@ sudo dnf install openssl-devel
 **Compile:**
 Make sure you have a C compiler installed such as GCC or Clang, I will use GCC for the example.
 ```sh
-gcc hpins.c -o hpins -lssl -lcrypto`
+gcc hpins_v0.X.c -o hpins -lssl -lcrypto`
 ```
+(replace X with the actual version number)
 You can run it by typing `./hpins` in the directory the compiled binary is in.
 But for convenience, you can install it system-wide (with `sudo`) or locally (per-user install):
 **System-wide Install:**
@@ -115,7 +116,7 @@ source ~/.bashrc
 echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
-Once it's installed successfully, you can just type `hpins` and it should work, after that, the program should help you on using it correctly.
+Once it's installed successfully, you can just type `hpins` and it should work. After that, the program should help you with using it correctly.
 
 ---
 
