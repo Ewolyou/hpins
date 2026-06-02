@@ -56,17 +56,17 @@
   If they're not installed, you can install them with the following commands:
 
   ##### Debian / Ubuntu:
-    ```sh
-    sudo apt install libssl-dev
-    ```
+  ```sh
+  sudo apt install libssl-dev
+  ```
   ##### Arch / Manjaro
-    ```sh
-    sudo pacman -S openssl
-    ```
+  ```sh
+  sudo pacman -S openssl
+  ```
   ##### Fedora
-    ```sh
-    sudo dnf install openssl-devel
-    ```
+  ```sh
+  sudo dnf install openssl-devel
+  ```
   **Compile:**
   Make sure you have a C compiler installed such as GCC or Clang, I will use GCC for the example.
   ```sh
@@ -94,25 +94,25 @@
   If you can see `/home/<your_username>/.local/bin` and `/usr/local/bin`, then you have installed HPINS!
   If you can't see them, you should add it to `~/.bashrc` or `~/.zshrc` (local, per-user):
   If only `~/.local/bin` is missing:
-    **Bash:**
-    ```sh
-    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-    source ~/.bashrc
-    ```
-    **Zsh:**
-    ```sh
-    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
-    source ~/.zshrc
-    ```
+  **Bash:**
+  ```sh
+  echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+  source ~/.bashrc
+  ```
+  **Zsh:**
+  ```sh
+  echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+  source ~/.zshrc
+  ```
   If `/usr/local/bin` is also missing (or only this missing), then (also) run this:
-    **Bash:**
-    ```sh
-    echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bashrc
-    source ~/.bashrc
-    ```
-    **Zsh:**
-    ```sh
-    echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
-    source ~/.zshrc
-    ```
+  **Bash:**
+  ```sh
+  echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bashrc
+  source ~/.bashrc
+  ```
+  **Zsh:**
+  ```sh
+  echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
+  source ~/.zshrc
+  ```
   Once it's installed successfully, you can just type `hpins` and it should work, after that, the program should help you on using it correctly.
