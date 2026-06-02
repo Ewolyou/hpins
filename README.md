@@ -1,5 +1,5 @@
 # HPINS
-> Hydric Package INStaller (HPINS) is my custom package manager.
+> Hydric Package INStaller (HPINS) is my custom package manager written in C for Linux.
 
 ---
 
@@ -25,16 +25,16 @@
 ---
 
 ## Filesystem Structures
-  ### HPINS Folder Structure (Client Side)
+### HPINS Folder Structure (Client Side)
       ~/.hpins/
         |
         +------ repo.list (automatically added and updated by the `update` command)
         +------ installed.list (automatically added by the `update` command and updated by the `install`, `remove`, and `upgrade` commands)
         +------ repo.url (optional file for custom URLs)
-  #### `repo.list` Structure (Server Side)
+#### `repo.list` Structure (Server Side)
       pkg_name pkg_version pkg_tar_sha256sum
       
-  ### Package Structure
+### Package Structure
       pkg_name.tar.gz
         |
         +--- pkg_name/
@@ -50,69 +50,69 @@
 ---
 
 ## Compile and Install to Your System
-  Download an HPINS version (latest version is recommended) from the Releases section (.c file).
+Download an HPINS version (latest version is recommended) from the Releases section (.c file).
   
-  OpenSSL development libraries are required.
-  If they're not installed, you can install them with the following commands:
+OpenSSL development libraries are required.
+If they're not installed, you can install them with the following commands:
 
-  ##### Debian / Ubuntu:
-  ```sh
-  sudo apt install libssl-dev
-  ```
-  ##### Arch / Manjaro
-  ```sh
-  sudo pacman -S openssl
-  ```
-  ##### Fedora
-  ```sh
-  sudo dnf install openssl-devel
-  ```
-  **Compile:**
-  Make sure you have a C compiler installed such as GCC or Clang, I will use GCC for the example.
-  ```sh
-  gcc hpins.c -o hpins -lssl -lcrypto`
-  ```
-  You can run it by typing `./hpins` in the directory the compiled binary is in.
-  But for convenience, you can install it system-wide (with `sudo`) or locally (per-user install):
-  **System-wide Install:**
-  ```sh
-  sudo mv hpins /usr/local/bin/hpins
-  ```
-  **Local Install (per-user):**
-  ```sh
-  mv hpins ~/.local/bin/hpins
-  ```
-  Both assume that the compiled HPINS binary is in your current working directory.
-  If you don't have `~/.local/bin/`, you can create it with:
-  ```sh
-  mkdir -p ~/.local/bin
-  ```
-  Check if `~/.local/bin/` and `/usr/local/bin/` is in your `PATH`:
-  ```sh
-  echo "$PATH" | tr ':' '\n'
-  ```
-  If you can see `/home/<your_username>/.local/bin` and `/usr/local/bin`, then you have installed HPINS!
-  If you can't see them, you should add it to `~/.bashrc` or `~/.zshrc` (local, per-user):
-  If only `~/.local/bin` is missing:
-  **Bash:**
-  ```sh
-  echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-  source ~/.bashrc
-  ```
-  **Zsh:**
-  ```sh
-  echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
-  source ~/.zshrc
-  ```
-  If `/usr/local/bin` is also missing (or only this missing), then (also) run this:
-  **Bash:**
-  ```sh
-  echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bashrc
-  source ~/.bashrc
-  ```
-  **Zsh:**
-  ```sh
-  echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
-  source ~/.zshrc
-  ```
-  Once it's installed successfully, you can just type `hpins` and it should work, after that, the program should help you on using it correctly.
+##### Debian / Ubuntu:
+```sh
+sudo apt install libssl-dev
+```
+##### Arch / Manjaro:
+```sh
+sudo pacman -S openssl
+```
+##### Fedora:
+```sh
+sudo dnf install openssl-devel
+```
+**Compile:**
+Make sure you have a C compiler installed such as GCC or Clang, I will use GCC for the example.
+```sh
+gcc hpins.c -o hpins -lssl -lcrypto`
+```
+You can run it by typing `./hpins` in the directory the compiled binary is in.
+But for convenience, you can install it system-wide (with `sudo`) or locally (per-user install):
+**System-wide Install:**
+```sh
+sudo mv hpins /usr/local/bin/hpins
+```
+**Local Install (per-user):**
+```sh
+mv hpins ~/.local/bin/hpins
+```
+Both assume that the compiled HPINS binary is in your current working directory.
+If you don't have `~/.local/bin/`, you can create it with:
+```sh
+mkdir -p ~/.local/bin
+```
+Check if `~/.local/bin/` and `/usr/local/bin/` is in your `PATH`:
+```sh
+echo "$PATH" | tr ':' '\n'
+```
+If you can see `/home/<your_username>/.local/bin` and `/usr/local/bin`, then you have installed HPINS!
+If you can't see them, you should add it to `~/.bashrc` or `~/.zshrc` (local, per-user):
+If only `~/.local/bin` is missing:
+**Bash:**
+```sh
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+**Zsh:**
+```sh
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+If `/usr/local/bin` is also missing (or only this missing), then (also) run this:
+**Bash:**
+```sh
+echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+**Zsh:**
+```sh
+echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+Once it's installed successfully, you can just type `hpins` and it should work, after that, the program should help you on using it correctly.
