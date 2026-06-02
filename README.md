@@ -94,7 +94,9 @@ echo "$PATH" | tr ':' '\n'
 ```
 If you can see `/home/<your_username>/.local/bin` and `/usr/local/bin`, then you have installed HPINS!
 If you can't see them, you should add it to `~/.bashrc` or `~/.zshrc` (local, per-user):
+
 If only `~/.local/bin` is missing:
+
 **Bash:**
 ```sh
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
