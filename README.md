@@ -120,4 +120,4 @@ Once it's installed successfully, you can just type `hpins` and it should work, 
 ---
 
 ## Changelog
-[Changelog](CHANGELOG.md)
+View the Changelog [here](CHANGELOG.md)
