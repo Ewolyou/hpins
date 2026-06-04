@@ -20,7 +20,7 @@
 ### Notes:
 - The default URL for package installation is `https://localhost:8000/hpins_repo`. You can change this in the source code or you can create `~/.hpins/repo.url` and just put the custom URL you want inside it in the first line without anything else, otherwise it won't work. Also make sure that you put the URL without any '/'s at the end.
 - HPINS should not be used with `sudo` and does not need `sudo` as it will always be installing package binaries to `~/.local/bin/` by default.
-- **Although `upgrade` can upgrade up to 200 packages, you can only `install`/`source`/`remove` ONE package at a time.
+- Although `upgrade` can upgrade up to 200 packages, you can only `install`/`source`/`remove` ONE package at a time.
 
 ---
 
