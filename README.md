@@ -32,7 +32,9 @@
         ├────── installed.list (automatically added by the `update` command and updated by the `install`, `remove`, and `upgrade` commands)
         └────── repo.url (optional file for custom URLs)
 #### `repo.list` Structure (Server Side)
-      pkg_name pkg_version pkg_tar_sha256sum
+```repo.list
+<pkg_name> <pkg_version> <pkg_tar_sha256sum>
+```
       
 ### Package Structure
       pkg_name.tar.gz
