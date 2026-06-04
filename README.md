@@ -6,7 +6,7 @@
 ## Features (for the latest version)
 - `install` command to install packages
 - `remove` command to remove packages installed with HPINS
-- `source` command to download the package's `.tar.gz` to your current working directory without extracting or registering it
+- `source` command to download the raw package archive to your current working directory without extracting or registering it
 - `update` command to update the repository database and check for any upgradable packages (using semantic versioning)
 - `upgrade` command to upgrade up to 200 packages
 - `list` command to list all available packages (including installed ones)
